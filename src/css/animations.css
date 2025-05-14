@@ -1,0 +1,43 @@
+@keyframes particle {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    transform: translateY(-50px) translateX(calc(var(--random-x) * 30px));
+    opacity: 0;
+    scale: 0;
+  }
+}
+
+.animate-particle {
+  --random-x: 0;
+  animation: particle 0.7s ease-out forwards;
+}
+
+.animate-particle:nth-child(1) { --random-x: 0.3; animation-delay: 0.02s; }
+.animate-particle:nth-child(2) { --random-x: -0.2; animation-delay: 0.04s; }
+.animate-particle:nth-child(3) { --random-x: 0.1; animation-delay: 0.06s; }
+.animate-particle:nth-child(4) { --random-x: -0.4; animation-delay: 0.08s; }
+.animate-particle:nth-child(5) { --random-x: 0.5; animation-delay: 0.1s; }
+.animate-particle:nth-child(6) { --random-x: -0.1; animation-delay: 0.12s; }
+.animate-particle:nth-child(7) { --random-x: 0.2; animation-delay: 0.14s; }
+.animate-particle:nth-child(8) { --random-x: -0.3; animation-delay: 0.16s; }
+.animate-particle:nth-child(9) { --random-x: 0.4; animation-delay: 0.18s; }
+.animate-particle:nth-child(10) { --random-x: -0.5; animation-delay: 0.2s; }
+.animate-particle:nth-child(11) { --random-x: 0.1; animation-delay: 0.22s; }
+.animate-particle:nth-child(12) { --random-x: -0.2; animation-delay: 0.24s; }
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
